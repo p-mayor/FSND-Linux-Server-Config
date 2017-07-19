@@ -9,7 +9,6 @@ Packages installed: apache2, libapache2-mod-wsgi, flask, postgresql, pip, virtua
 UFW configuration:
 
 To                         Action      From
---                         ------      ----
 22                         ALLOW       Anywhere                  
 2200/tcp                   ALLOW       Anywhere                  
 80/tcp                     ALLOW       Anywhere                  
