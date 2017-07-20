@@ -1,5 +1,13 @@
 # FSND-Linux-Server-Config
 
+Summary: An amazon lightsail instance was created and configured to serve a basic web application.
+
+## 1. Responding to HTTP requests
+
+Install apache2 to respond to HTTP requests:
+
+```sudo apt-get install apache2```
+
 IP: 52.14.72.239 SSH Port: 2200
 
 Complete URL: http://ec2-52-14-72-239.us-east-2.compute.amazonaws.com/
