@@ -165,8 +165,10 @@ Reload SSH using ```sudo service ssh restart```
 ## 9. Configure Uncomplicated Firewall (UFW)
 Allow ssh port 2200:
 ```sudo ufw allow 2200```
+
 Allow http port 80:
 ```sudo ufw allow 80```
+
 Deny ssh port 22:
 ```sudo ufw deny 22```
 
