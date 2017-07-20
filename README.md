@@ -126,6 +126,36 @@ Now your directory structure should look like this:
 Now restart apache:
 ```sudo service apache2 restart```
 
+## 6. Install and configure PostgreSQL
+
+Install:
+```sudo apt-get install postgresql postgresql-contrib```
+
+Switch over to the postgres account on your server by typing:
+```sudo -i -u postgres```
+
+Access postgres prompt with:```psql```
+Exit with: ```\q```
+
+Create database for our app:
+```sudo -u postgres createdb restaurantmenuwithusers```
+
+## 7. Use SCP to transfer local repository to server
+
+Copy directory from local machine to server:
+```sudo scp -r /Localdirectorypath ubuntu@example.com:/var/www/FlaskApp/FlaskApp```
+
+Make sure that the file structure looks like this:
+```
+|--------FlaskApp
+|----------------FlaskApp
+|-----------------------static
+|-----------------------templates
+|-----------------------venv
+|-----------------------__init__.py
+|----------------flaskapp.wsgi
+```
+
 ## Additional info
 IP: 52.14.72.239 SSH Port: 2200
 
