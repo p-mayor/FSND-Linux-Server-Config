@@ -156,12 +156,26 @@ Make sure that the file structure looks like this:
 |----------------flaskapp.wsgi
 ```
 
+Make sure all required packages are installed. For complete list see additional info below.
+
+## 8. Configure SSH ports
+Use ```sudo vim /etc/ssh/sshd_config``` and then change Port 22 to Port 2200 , save & quit.
+Reload SSH using ```sudo service ssh restart```
+
+## 9. Configure Uncomplicated Firewall (UFW)
+Allow ssh port 2200:```sudo ufw allow 2200```
+Allow http port 80:```sudo ufw allow 80```
+Deny ssh port 22:```sudo ufw deny 22```
+
+Enable ufw: ```sudo ufw enable```
+
+
 ## Additional info
 IP: 52.14.72.239 SSH Port: 2200
 
 Complete URL: http://ec2-52-14-72-239.us-east-2.compute.amazonaws.com/
 
-Packages installed: apache2, libapache2-mod-wsgi, flask, postgresql, pip, virtualenv, sqlalchemy, fail2ban
+Packages installed: apache2, libapache2-mod-wsgi, flask, postgresql, pip, virtualenv, sqlalchemy, fail2ban, unattended-upgrades
 
 UFW configuration:
 ```
@@ -180,3 +194,5 @@ Third Party Resources:
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04
