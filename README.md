@@ -163,11 +163,15 @@ Use ```sudo vim /etc/ssh/sshd_config``` and then change Port 22 to Port 2200 , s
 Reload SSH using ```sudo service ssh restart```
 
 ## 9. Configure Uncomplicated Firewall (UFW)
-Allow ssh port 2200:```sudo ufw allow 2200```
-Allow http port 80:```sudo ufw allow 80```
-Deny ssh port 22:```sudo ufw deny 22```
+Allow ssh port 2200:
+```sudo ufw allow 2200```
+Allow http port 80:
+```sudo ufw allow 80```
+Deny ssh port 22:
+```sudo ufw deny 22```
 
-Enable ufw: ```sudo ufw enable```
+Enable ufw:
+```sudo ufw enable```
 
 
 ## Additional info
